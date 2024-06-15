@@ -1,6 +1,8 @@
 ------Requisitos---------
+
 se necesita una base de datos con el schema
 persistencia_db
+en la carpeta resources, en la clase application.properties se debe ingresar el usuario y contraseña de la base de datos
 
 ------Descripción---------
 
