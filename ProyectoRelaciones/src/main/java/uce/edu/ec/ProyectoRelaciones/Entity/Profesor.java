@@ -2,6 +2,7 @@ package uce.edu.ec.ProyectoRelaciones.Entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -9,15 +10,14 @@ import java.util.List;
 public class Profesor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String nombre;
-    String apellido;
-    int edad;
-    String email;
+    private Long id;
+    private String nombre;
+    private String apellido;
+    private int edad;
+    private String email;
 
     @OneToMany(mappedBy = "profesor")
-    private List<Materias> materias;
+    private List<Materias> materias = new ArrayList<>();
 
     public Profesor() {
     }

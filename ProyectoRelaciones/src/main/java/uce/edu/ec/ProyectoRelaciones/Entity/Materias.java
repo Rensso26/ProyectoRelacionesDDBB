@@ -2,6 +2,7 @@ package uce.edu.ec.ProyectoRelaciones.Entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -26,7 +27,13 @@ public class Materias {
     private Horarios horario;
 
     @ManyToMany
-    private List<Estudiantes> estudiantes;
+    @JoinTable(
+            name = "materias_estudiantes",
+            joinColumns = @JoinColumn(name = "materia_cod"),
+            inverseJoinColumns = @JoinColumn(name = "estudiante_id")
+    )
+    private List<Estudiantes> estudiantes = new ArrayList<>();
+
     public Materias() {
     }
 

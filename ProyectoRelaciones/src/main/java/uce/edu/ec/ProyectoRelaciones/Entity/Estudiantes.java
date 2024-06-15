@@ -9,7 +9,7 @@ import java.util.List;
 public class Estudiantes {
 
     @Id
-    long id;
+    Long id;
     String name;
     String apellido;
     int edad;
