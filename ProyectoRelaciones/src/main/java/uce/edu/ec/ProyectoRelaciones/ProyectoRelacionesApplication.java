@@ -5,12 +5,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import uce.edu.ec.ProyectoRelaciones.repositorys.*;
 import uce.edu.ec.ProyectoRelaciones.services.CRUD;
 
-import java.util.Scanner;
+
+/**
+ * @author Parra Rensso
+ * Titulo: ProyectoRelacionesDDBB
+ */
 
 @SpringBootApplication
 @EntityScan(basePackages = "uce.edu.ec.ProyectoRelaciones.Entity")
